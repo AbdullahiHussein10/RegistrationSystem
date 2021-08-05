@@ -17,14 +17,10 @@ class UserController extends Controller
     public function filter(Request $request)
     {
      
-        // $date = $request->all;
-        // $data['date'] = Carbon::createFromFormat('m/d/Y', $request->$date)->format('Y-m-d');
-
-        // $users = User::whereDate('created_at', $date)->get();
-
         $users = User::whereRaw('date(created_at) = ?', $request->date)->get();
+        $userCount = $users->count();
 
        
-        return view('users.filterUsers', compact('users'));
+        return view('users.filterUsers', compact('users', 'userCount'));
     }
 }

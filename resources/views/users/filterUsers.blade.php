@@ -18,7 +18,9 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if ($userCount > 0)
                     @foreach ($users as $key => $user)
+                        
 
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
@@ -28,7 +30,14 @@
                             <td>{{ $user->age }}</td>
                             <td>{{ $user->address }}</td>
                         </tr>
+
                     @endforeach
+
+                    @else
+                        <tr>
+                            <td>No users found</td>
+                        </tr>
+                        @endif
                 </tbody>
             </table>
         </div>
