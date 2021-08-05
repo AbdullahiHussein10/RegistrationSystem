@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="qualification" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="qualification" class="col-md-4 col-form-label text-md-right">{{ __('Qualification') }}</label>
 
                             <div class="col-md-6">
                                 <input id="qualification" type="text" class="form-control @error('qualification') is-invalid @enderror" name="qualification">
